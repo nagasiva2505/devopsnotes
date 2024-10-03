@@ -1,0 +1,86 @@
+docker ps	=it verifies the docker is installed or not
+
+docker info	= it will provide the information of docker (eg-no of containers)
+
+docker search images	= it will list specific image in docker hub  
+
+apt-get update	=we should update when we want to install any software
+
+apt-get install docker.io	=it will install docker
+
+docker images	= it will shows the images lists of containers
+
+docker run -it image	=it verifies the perticular image is exits in the local or not,if it is exits 'it will create a container for that image',if it is not exits
+it pulls the image from the docker hub and create a container on it
+
+exit	=it will exit from that container and container will stop
+
+docker ps	=it will display the running containers
+
+docker ps -a	=it will display all the containers and shows the docker id and name
+
+docker start cont ID		= it will start the container here we should specify the id or name 
+docker stop contid1 contid2	= it will stop the container id's
+
+docker attach ID	= it will redirect u to docker container using
+
+ctrl+p,r	= it will comeout from container without stopping it
+
+docker cp ContainerName:/file1 /tmp	it will copy the file1 from container to local host system in the given path temp
+
+docker rm con1 con2 con3	= it will remove containers but first we need to stop the specific container first
+
+docker run -it --name con1 ubuntu	=it will create docker with specific name we have mentioned using ubuntu image
+
+docker  tag docker.io/username/repsitory:v1.0 docker.io/username/repository:v2.0	=it will create copy of image from the existing image (but giving new tag from v1.0 to 2.0)
+
+docker run -d -rm busybox sleep 1000	=here busybox is a image and here we are giving are creating image with ditach mode(-d)i.e stopping and removing(-rm) after running that comnd
+
+docker inspect container	=it will show information of the container (eg ip address,status)
+
+docker exec container1 touch /tmp/test.txt	= it will run commands in the container1 without opening docker which is running
+
+docker logs continer	= it will show the commands which are executing in that container
+  
+cd /var/lib/docker	=all the images stored in the directary
+
+docker run -it --name PortTest -p 9090:80 ubuntu  =it will container with the name porttest and assain port 9090 to the container
+
+curl http://localhost:80	=it will create
+
+docker rm $(docker ps -a -q)	= it will delete all stoped containers at once
+
+docker rmi $(docker images -q) -f  =it will delete all dockers images
+
+apt-get install vim	=initaially we dont have vi editor in container so we neet to install it
+
+docker commit container repositoryname/image  =it will commit the specific container to the repositoryname(it should be ref from dockerhub) and specify any image name u need
+
+docker login	= enter the username and password
+
+docker push repositoryname/image	= it will push the image
+
+docker run -it repositoryname/image	= it will pull the image
+
+docker network ls	= it will show all type of networks
+
+docker run -it --net xxxx con1 ubuntu	= it will create the container with the given network type i.e in xxxx= network type bridge,host,none...etc
+
+docker network rm xxxxxx	= it will remove the specific network
+
+ifconfig	= shows network interfaces list( it will show which network type we have connected)
+
+apt-get install net-tools	= it should install for ifconfig to run
+
+apt install iputils-ping	=it should install for ping to work
+
+docker exec con1 ping 172.17.0.2  =it will connect other container by giving ip address of the container which we need to connect ip will be found in docker inspect(it will be connect when the two containers in same network)
+
+docker run -it -v data:/app ubuntu  = it will create the volume here -v indicates volume and data is the volume name and the /app is the directory where the volume was created
+
+docker volume rm volumename	= it will delete the specific volume
+
+docker run -it -v /home/ubuntu:/app ubuntu  =here it will copy the data from host machine directory (i.e /home/ubuntu) to the docker volume directory(i.e /app)
+
+docker build -t imagename:dockerfile /directry	= this command is to create our own image first we have to create docker file and write the content of what image need to create and and specify the path of docker file and -t is for tag
+

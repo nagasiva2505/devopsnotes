@@ -1,0 +1,78 @@
+clear = clears the window
+whoami = it will show in which user ur present
+echo "enter text"  =it will show back ur text
+pwd =it will show present working directory
+cd / = change directory
+ls = list all files and folder in that working directry
+ls -l =list the files and folder & permissions
+sudo  su = it will direct to root
+sudo bash
+cd ~ = it will redirect to home
+cat >>
+touch xxxx.ext  =it will create a file in the currect working directry
+vi xxxx.ext  = we can edit the file
+su ubuntu = it will switch to root to recent working directry
+cat xxxx.ext  = it will show the content of the file
+cp xxxx.ext /home/folder  =it will copy the file to given directory
+cp -n xxx.ext	=it does not overwrite the file
+cp -u xxx.ext	=copy only when the SOURCE file is newer than the destination file
+cp -R xxx.ext	=it copies hidden files
+mv xxxx.ext /home/folder  = it will move the file to given directory
+mv file1 file2  = it renames the file1 to file2
+rm xxxx.ext	= it will remove the files not the directry
+rm -r xxxxx	= it will delete the directry which contains files also
+mkdir /home/xxxxx/  = it will create the folder in the mentioned directry
+rmdir xxxxx	= it will delete directry
+grep xxxxxx file.ext  = it will search words in the specific file
+sort xxxxx.ext	= it will show the words in the file in alphabatical order
+chown root xxxx.ext = it will change the wonner to root for the specific file
+chmod 777 xxxx.ext	= it will change the access permision for files and directries.(0=no,1=exicute,2=write,4=read,7=all)permission and first 7 is for user,second 7 is forgroup, third 7 is for anyother
+tar -cvf xxxxx.tar =it will uzip the zipped files
+cut -c1 xxxx.ext  =it will show only one colomns in the file
+cut -c1-2 xxxx.ext  =it will show one and two colomns in the file
+sed 's/text1/text2/' xxxx.ext	=it will replace the word text1 to text2 and show temperarly, it is stream editor
+sed -i 's/text1/text2/' xxxx.ext	=it will replace the word text1 to text2 in the existing file permenently by adding -i
+uniq xxxx.ext	=it will remove the duplicate lines in that file
+free	= to see the memory of the user
+free -h	=it is human readable data it will show memory in mb(h=mb,k=kb,g=gb)
+sudo useradd xxxx  =it will creat a username
+sudo passwd xxxxx = it will create password
+sudo adduser xxxx  =it will create user with password and create a folder with the given user
+sudo userdel xxxxx  = it will delete the specific user
+sudo groupadd xxxx  = it will create group
+sudo groupdel xxxx  = it will delete group
+groups xxxxx  = it will show the linked groups with the specific user
+cat /etc/passwd	=in bottom of the list we will get the list of users
+tail cat xxxx.ext	= it will show the last 10 lines
+tail -n 3 /cat xxxx.ext	= it will show the last 3 lines
+head cat xxxx.ext	= it will show the first 10 lines
+sudo apt-get update	=it will update the repositorys which is already there in the system, it is done before installing any apt command
+sudo apt-get install members	=it will install the users in group
+members xxxxx	= it will show the users in the specfic group, it should be done after installing members from apt
+sudo usermod -a -G group username =it will add the specific user to the current group
+sudo su xxxxx	=it is to switch one user to another user by specifiying the name
+ awk '/xxxxx/ {print}' file2	=awk is like a grep comd but it can show the specific columns and specific rows
+awk '{print $1,$4}' file2  =it will show the first and fourth letter only in all the sentences in a column
+df	=it tells disk usage in %
+du	=it will show the usage of users,it specifies the sizes of files also
+du /home/ubuntu	=it will shows the usage of specific directry
+Cat /proc/memeryinfo	=displays memory information
+Cat /proc/cpuinfo	=displays cpu information
+                                services
+service apache status	=it will check the status of that service weather it is installed or not,here apache is a web service
+apt-get install apache	=it will install the specific service first apt should be updated
+apt-get remove apache	=it will remove the specific service
+service apache start	=it will start the service
+service apache stop	=it is stop the service if it is running
+ps -ef			=it will show all the services running
+netstat -tunlp		=to identify which ports are running
+top			=it displays top20 pross which are consuming more displays
+Crontab -e		=it is used to sheduling the process or commands to run in a specific time or date or week 
+
+wget https://xxxxx.com	=it will download the file from the specific website
+wget -C https://xxxxx.com /home/ubuntu/	=it will download the file from the specific website to the specific directory here C is change directory
+cp -r folder2 /home/ubuntu/folder1	= it will copy the folder2 inside the folder1 directory here r is recursue(r will consider all files and directorys)
+mkdir -p /home/ubuntu/f1/f2/f3	=it will create directorys(f1 in ubuntu, f2 in f1, f3 in f2),i.e creats folder in folder in folder
+find /home/ubuntu -name 'file name'  = it will find the directry name in the specific directory( inplace of directory if we given . it will search in all directorys
+sed -n '2p' filename
+sed '2d' filename 

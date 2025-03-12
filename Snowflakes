@@ -1,0 +1,1 @@
+"Fetch data from 'CUST_TIN', identify the smallest 'CUST_ID', ensure all 'CUST_ID' values match this smallest value, and verify corresponding 'SHORT_NAME' values align accordingly."
